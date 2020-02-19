@@ -30,7 +30,7 @@ tags = {
 } 
 
 resource "aws_security_group" "webserveeer" {
-  name        = "Webserver security_group"
+  name        = "Webserveeer security_group"
   description = "Webserver security_group"
 
   ingress {
