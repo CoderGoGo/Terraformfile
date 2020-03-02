@@ -46,7 +46,7 @@ chkconfig httpd on
 EOF
 
 tags = {
-    Name = "WebServer"
+    Name = "WebServer2"
     Owner = "Denis Scherbakov"
 }
 
