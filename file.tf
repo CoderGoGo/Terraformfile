@@ -23,7 +23,7 @@ chkconfig httpd on
 EOF
 
 tags = {
-    Name = "WebServer"
+    Name = "WebServer1"
     Owner = "Denis Scherbakov"
 }
 
@@ -31,7 +31,7 @@ tags = {
 
 resource "aws_instance" "WebServer2" {
   instance_type           = "t3.micro"
-  ami                     = "ami-017ad30b324faed9b"
+  ami                     = "ami-01a7a49829bda9d79"
   key_name                = "WindowsServer16WithConteiners"
   vpc_security_group_ids  = [aws_security_group.web.id]
   user_data = <<EOF
