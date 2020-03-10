@@ -12,7 +12,7 @@ resource "aws_instance" "WebServer" {
   ami                     = "ami-0f1d8c8ad70ce9c62"
   key_name                = "WindowsServer16WithConteiners"
   private_ip             = "172.31.32.${count.index +10}"
-  subnet_id              = "subnet-b62ea3fa"
+  subnet_id              = "subnet-4e55a335"
   vpc_security_group_ids  = [aws_security_group.web.id]
   user_data = <<EOF
 #!/bin/bash
