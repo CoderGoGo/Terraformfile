@@ -29,7 +29,9 @@ tags = {
     Name = "WebServer"
     Owner = "Denis Scherbakov"
 }
-
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = "${aws_instance.WebServer.id}"
+}
 } 
 
 resource "aws_security_group" "web" {
