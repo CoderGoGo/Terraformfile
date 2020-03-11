@@ -1,0 +1,21 @@
+---
+- name: Upload my WebSite
+  hosts: all
+  become: yes
+
+  vars:
+    source_file: /var/lib/jenkins/workspace/Deploy/
+    distin_file: /var/www/html 
+
+  tasks:
+  - name: Copy WebSite
+    copy: src={{ source_file }} dest={{ distin_file }} mode=0555
+    notify: Restart Apache
+  - name: Start WebServer 
+    service: name=httpd state=started enabled=yes 
+
+  handlers:
+  - name: Restart Apache
+    service: name=httpd state=restarted 
+
+    
