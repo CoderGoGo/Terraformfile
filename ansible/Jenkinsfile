@@ -1,0 +1,8 @@
+node('master') {
+    
+    stage('ansible start') {
+ 
+          sh 'cd ansible'
+          sh 'ansible-playbook playbook.yml'
+    }
+    }
